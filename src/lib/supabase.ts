@@ -1,14 +1,9 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Ambassador } from '../data/ambassadorsData';
 
-const DEFAULT_SUPABASE_URL = 'https://vrqdjggzysvtpilbdjid.supabase.co';
-const DEFAULT_SUPABASE_ANON_KEY =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZycWRqZ2d6eXN2dHBpbGJkamlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4Njk0MjIsImV4cCI6MjEwNjQ0NTQyMn0.32l3CFNH-3wT6nlwE2uTpGzp3R7z8oNWIhDwtT2HGZo';
-const DEFAULT_STORAGE_BUCKET = 'ambassador-photos';
-
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || DEFAULT_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || DEFAULT_SUPABASE_ANON_KEY;
-export const BUCKET_NAME = import.meta.env.VITE_SUPABASE_STORAGE_BUCKET || DEFAULT_STORAGE_BUCKET;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+export const BUCKET_NAME = import.meta.env.VITE_SUPABASE_STORAGE_BUCKET || '';
 
 export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 

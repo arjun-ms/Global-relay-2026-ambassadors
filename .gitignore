@@ -39,3 +39,5 @@ check_dimensions.js
 diagnose_hero.js
 take_screenshot.js
 test_*.js
+node_modules
+.agents/
